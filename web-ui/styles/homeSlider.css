@@ -1,0 +1,9 @@
+.carousel {
+    position: absolute;
+    color: #f3ad1e;
+    font-size: 60%;
+    top: 40%;
+    text-align: center;
+    padding-left: 40px;
+    white-space: pre-wrap;
+}

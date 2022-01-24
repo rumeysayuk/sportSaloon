@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,800;1,800&display=swap');
+
+h5 {
+    font-family: 'Epilogue', sans-serif;
+}
+
+.card {
+    height: 200px;
+    text-align: center;
+    border: none;
+}
+
+.icons {
+    font-size: 60px;
+}
+
+.a {
+    border: none;
+}
+
+.step-img {
+    width: 90px;
+    text-align: center;
+    object-fit: cover;
+}

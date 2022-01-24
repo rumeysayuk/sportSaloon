@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,800;1,800&display=swap');
+
+.headSignup {
+    font-size: 26px !important;
+    font-weight: 700;
+    justify-content: center;
+    padding-left: 2.5rem;
+    align-items: center;
+}
+
+.ul {
+    margin-left: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-success {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hlabel {
+    color: #5570ac;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 2rem;
+}
+
+.hsublabel {
+    color: #5a5a5a;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    line-height: normal;
+    padding-top: 10px;
+    text-align: right;
+}
+.text-signup{
+    font-size: large;
+    margin-left: 1rem;
+    color: #f3ad1e;
+}
+@media screen and (max-width:800px) {
+
+    .myDiv{display:none;}
+
+
+}

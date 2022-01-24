@@ -1,0 +1,27 @@
+.head {
+    color: #f3ad1e;
+    font-family: Raleway;
+    font-size: 32px;
+    font-stretch: normal;
+    font-style: oblique;
+    font-weight: 900;
+}
+
+.backToTop {
+    bottom: 5%;
+    color: #f3ad1e;
+    border: 1px solid #f3ad1e;
+    cursor: pointer;
+    position: fixed;
+    right: 4%;
+    border-radius: 5px;
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+    width: 40px;
+    height: 40px;
+}
+
+.backToTop:hover {
+    background-color: #f3ad1e;
+    color: white;
+}

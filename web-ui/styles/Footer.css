@@ -1,0 +1,13 @@
+.footer-icon{
+    font-size: 30px;
+}
+.footer-icon:hover{
+    transition: all .2s;
+    cursor: pointer;
+    color: #f3ad1e;
+}
+.footer-links:hover{
+    transition: all .2s;
+    cursor: pointer;
+    color: #f3ad1e !important;
+}

@@ -1,0 +1,44 @@
+.ourCardS {
+    height: auto;
+    text-align: start;
+    border: none;
+    position: relative;
+}
+
+.ourCardS > .ant-card-body {
+    position: absolute;
+    bottom: 0;
+    background: rgba(30, 30, 30, 0.44);
+    width: 100%;
+    height: 50px;
+
+}
+
+.ourCardS .ant-card-meta-title {
+    white-space: pre-wrap;
+}
+
+.location-shape {
+    color: #f3ad1e;
+    font-family: Raleway;
+    font-size: 20px;
+    font-stretch: ultra-expanded;
+    font-style: normal;
+    font-weight: 900;
+    height: 16px;
+    letter-spacing: normal;
+    line-height: normal;
+    width: 130px;
+    white-space: nowrap;
+}
+
+.ourCardS .image-absolute {
+    position: absolute;
+    bottom: 49%;
+}
+
+@media (max-width: 768px) {
+    .mt-6rem {
+        margin-top: 6.8rem !important;
+    }
+}
