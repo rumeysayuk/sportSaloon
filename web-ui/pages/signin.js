@@ -1,17 +1,35 @@
 import React from 'react';
 import {Form, Input, Button, Checkbox} from 'antd';
+import {useDispatch} from "react-redux";
 import Link from "next/link";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import SwipeableCarousel from "../components/SwipeableCarousel/SwipeableCarousel";
+import * as authService from "../services/authService";
+import {signIn} from "../store/actions/auths";
+import {toast} from "react-toastify"
 
 const Signin = () => {
+    const dispatch = useDispatch();
     const onFinish = (values) => {
+        loginUser(values)
         console.log('Success:', values);
     };
 
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
+    };
+    const loginUser = (values) => {
+        authService.signin(values)
+            .then((res) => {
+                dispatch(signIn(res.data))
+                toast.success(res.data.message);
+                console.log("successssssss")
+            }).catch((err) => {
+            if (err && err.res && err.res.data && err.res.data.message)
+
+                toast.error(err.res.data.message);
+        })
     };
     return (
         <>
@@ -66,7 +84,7 @@ const Signin = () => {
                         </Form.Item>
                     </Form>
                 </div>
-             <SwipeableCarousel/>
+                <SwipeableCarousel/>
             </div>
             <Footer/>
         </>
