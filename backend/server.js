@@ -3,22 +3,22 @@ const app = express();
 const CustomErrorHandler = require("./middlewares/error/customErrorHandler")
 const path = require("path")
 const fileUpload =require("express-fileupload")
-
+const cors = require("cors")
 //express body middleware
 app.use(express.json())
 app.use(fileUpload())
 //environment variables
 require("dotenv").config({
-    path: "./config/env/.env"
+    path: "./.env"
 });
 const routes = require("./routes")
 const databaseConnect = require("./helpers/database/databaseConnect")
 databaseConnect().then(() => {
     console.log("mongo db connection success")
 });
+app.use(cors())
 //static files
 app.use(express.static(path.join(__dirname, "public")))
-console.log(__dirname)
 // app.use()
 
 //Routes Middleware
