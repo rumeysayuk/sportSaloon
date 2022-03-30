@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {Form, Input, Checkbox, Button, Select} from 'antd';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import SwipeableCarousel from "../components/SwipeableCarousel/SwipeableCarousel";
 import Link from "next/link";
+import apiAxios from "../utility/apiAxios";
+import {toast} from "react-toastify";
+import { useRouter } from 'next/router'
 
 const {Option} = Select;
 const Signup = () => {
+    const router = useRouter()
     const formItemLayout = {
         labelCol: {
             xs: {
@@ -35,6 +39,10 @@ const Signup = () => {
     const [form] = Form.useForm();
 
     const onFinish = (values) => {
+        apiAxios.post("/auth/register", values).then(({data}) => {
+            toast.success(data.message)
+            router.push("/signin")
+        })
         console.log('Received values of form: ', values);
     };
 
@@ -53,7 +61,7 @@ const Signup = () => {
     const items = ["Tek üyelikle 350+ spor salonu", "Taahhütsüz ve Aylık üyelik esnekliği", "Tüm salonlara sınırsız giriş özgürlüğü", "Dilediğinde iptal etme hakkı"]
 
     return (
-        <>
+        <Fragment>
             <div className="container">
                 <Header/>
                 <div className="row d-flex w-100">
@@ -186,7 +194,7 @@ const Signup = () => {
                 <SwipeableCarousel/>
             </div>
             <Footer/>
-        </>
+        </Fragment>
 
 
     );
